@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="36sp" />
+
+    <LinearLayout
+        android:id="@+id/input_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:orientation="vertical"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="16dp">
+
+        <!--        L       -->
+        <LinearLayout style="@style/inner_linear_layout">
+
+            <TextView
+                style="@style/variable_name_text_view"
+                android:text="L :" />
+
+            <EditText
+                android:id="@+id/value_l"
+                style="@style/variable_input_field" />
+        </LinearLayout>
+
+        <!--        W       -->
+        <LinearLayout style="@style/inner_linear_layout">
+
+            <TextView
+                style="@style/variable_name_text_view"
+                android:text="W :" />
+
+            <EditText
+                android:id="@+id/value_w"
+                style="@style/variable_input_field" />
+        </LinearLayout>
+
+        <!--        H       -->
+        <LinearLayout style="@style/inner_linear_layout">
+
+            <TextView
+                style="@style/variable_name_text_view"
+                android:text="H :" />
+
+            <EditText
+                android:id="@+id/value_h"
+                style="@style/variable_input_field" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_panel"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/cm_to_sq"
+            style="@style/calculate_button"
+            android:background="@drawable/border_red"
+            android:text="cm to sq" />
+
+        <Button
+            android:id="@+id/inch_to_sq"
+            style="@style/calculate_button"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/border_green"
+            android:text="inch to sq" />
+    </LinearLayout>
+
+</RelativeLayout>
